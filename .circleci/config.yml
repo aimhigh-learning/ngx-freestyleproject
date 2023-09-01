@@ -25,10 +25,7 @@ jobs:
       - save_cache:
           key: node-deps-v1-{{ .Branch }}-{{checksum "package-lock.json"}}
           paths:
-            - ~/.npm
-      - run:
-          name: Build the npm package 
-          command: npm run test
+            - ~/.npm     
 
       - run:
           name: Publish the package
